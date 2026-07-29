@@ -201,7 +201,7 @@ footer.site .wrap {
   padding: 1.3rem 1.4rem;
   margin: 0.4rem 0 1.2rem;
 }
-.project-card img.logo { max-width: 100%; height: auto; display: block; margin: 0 auto 1rem; max-height: 180px; }
+.project-card img.logo { width: min(620px, 100%); height: auto; display: block; margin: 0 auto 1.1rem; }
 .project-card .tagline {
   font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 0.85rem;
