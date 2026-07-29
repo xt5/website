@@ -1,0 +1,219 @@
+/* Xiangyu Tao — personal academic site */
+:root {
+  --bg: #f7faf7;
+  --text: #182b22;
+  --muted: #5b6d63;
+  --accent: #14452f;
+  --accent-2: #2a9d8f;
+  --accent-soft: #e3efe7;
+  --rule: #d8e5da;
+  --link: #1f7a5c;
+  --maxw: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif Pro", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header / nav */
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.4rem 0 1.1rem;
+}
+header.site .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.site-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  text-decoration: none;
+}
+.site-name .zh {
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 0.45em;
+  font-size: 0.95em;
+}
+nav.main a {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1.1rem;
+}
+nav.main a:first-child { margin-left: 0; }
+nav.main a:hover { color: var(--accent); }
+nav.main a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* Main content */
+main { padding: 2.6rem 0 3rem; }
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  margin: 0 0 1.1rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.25rem;
+  margin: 2.2rem 0 0.8rem;
+  font-weight: 700;
+}
+h2:first-child { margin-top: 0; }
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: #14452f; }
+
+.lede { font-size: 1.05rem; }
+
+.muted { color: var(--muted); }
+
+.small {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Homepage intro */
+.intro { display: flex; gap: 1.6rem; align-items: flex-start; flex-wrap: wrap; }
+.intro-text { flex: 1 1 26rem; }
+
+/* Publication list */
+ol.pubs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ol.pubs li {
+  margin: 0 0 1.15rem;
+  padding-left: 0;
+}
+ol.pubs .title { font-weight: 600; }
+ol.pubs .venue { font-style: italic; }
+.pub-year {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-top: 1px solid var(--rule);
+  padding-top: 1.1rem;
+  margin: 1.8rem 0 0.9rem;
+  font-weight: 600;
+}
+.award {
+  display: inline-block;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  margin-top: 0.25rem;
+}
+
+/* News / blog */
+ul.news { list-style: none; margin: 0; padding: 0; }
+ul.news li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+  align-items: baseline;
+}
+ul.news .date {
+  flex: 0 0 6.2rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+article.post h1 { margin-bottom: 0.3rem; }
+article.post .post-date { margin-bottom: 1.6rem; }
+
+/* Contact list */
+ul.contact { list-style: none; margin: 0; padding: 0; }
+ul.contact li { margin-bottom: 0.45rem; }
+ul.contact .label {
+  display: inline-block;
+  width: 6.5rem;
+  color: var(--muted);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+/* Footer */
+footer.site {
+  border-top: 1px solid var(--rule);
+  padding: 1.2rem 0 2rem;
+}
+footer.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 540px) {
+  html { font-size: 16px; }
+  nav.main a { margin-left: 0.8rem; }
+  ul.news li { flex-direction: column; gap: 0.1rem; }
+}
+
+/* Header logo mark */
+.site-name { display: inline-flex; align-items: center; gap: 0.55rem; }
+.site-name img.mark { height: 34px; width: auto; display: block; }
+
+/* THREADS project card */
+.project-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 1.3rem 1.4rem;
+  margin: 0.4rem 0 1.2rem;
+}
+.project-card img.logo { max-width: 100%; height: auto; display: block; margin: 0 auto 1rem; max-height: 150px; }
+.project-card .tagline {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+/* Headshot */
+.intro img.headshot {
+  width: 150px; height: 150px; border-radius: 50%;
+  flex: 0 0 auto; border: 3px solid var(--accent-soft);
+}
+@media (max-width: 540px) { .intro img.headshot { margin: 0 auto; } }
