@@ -93,7 +93,7 @@ p { margin: 0 0 1rem; }
 a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 a:hover { color: #14452f; }
 
-.lede { font-size: 1.05rem; }
+.lede { font-size: 1rem; }
 
 .muted { color: var(--muted); }
 
