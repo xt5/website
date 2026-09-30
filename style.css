@@ -227,3 +227,11 @@ footer.site .wrap {
 .profile-links a:hover { background: var(--accent-soft); }
 .profile-links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; background: var(--accent-soft); }
 @media (max-width: 540px) { .profile { margin: 0 auto; } }
+
+/* Compact academic background beneath the profile */
+.profile-education { margin-top: 1.6rem; text-align: left; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+.profile-education h2 { margin: 0 0 0.85rem; font-size: 0.8rem; font-weight: 600; color: var(--text); }
+.profile-education ul { list-style: none; margin: 0; padding: 0; }
+.profile-education li { margin: 0 0 1rem; font-size: 0.75rem; line-height: 1.5; }
+.profile-education strong { display: block; font-weight: 500; }
+.profile-education span { display: block; margin-top: 0.2rem; color: var(--muted); }
