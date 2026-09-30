@@ -1,0 +1,236 @@
+/* Xiangyu Tao — personal academic site */
+:root {
+  --bg: #ffffff;
+  --text: #252b28;
+  --muted: #626963;
+  --accent: #14452f;
+  --accent-soft: #e3efe7;
+  --rule: #e5e8e5;
+  --link: #245d43;
+  --maxw: 960px;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif Pro", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header / nav */
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.6rem 0;
+}
+header.site .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.site-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  text-decoration: none;
+}
+.site-name .zh {
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 0.45em;
+  font-size: 0.95em;
+}
+nav.main a {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1.1rem;
+}
+nav.main a:first-child { margin-left: 0; }
+nav.main a:hover { color: var(--accent); }
+nav.main a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* Main content */
+main { padding: 3.5rem 0 4rem; }
+
+h1 {
+  font-size: clamp(1.9rem, 4vw, 2.35rem);
+  line-height: 1.25;
+  margin: 0 0 1.1rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.25rem;
+  margin: 2.8rem 0 1rem;
+  font-weight: 700;
+}
+h2:first-child { margin-top: 0; }
+
+p { margin: 0 0 1.35rem; }
+
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: #14452f; }
+
+.lede { font-size: 1rem; }
+
+.muted { color: var(--muted); }
+
+.small {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Homepage intro */
+.intro { display: grid; grid-template-columns: 188px minmax(0, 1fr); gap: 3rem; align-items: start; }
+.intro-text { min-width: 0; }
+.intro-text > p { max-width: 65ch; }
+
+/* Publication list */
+ol.pubs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ol.pubs li {
+  margin: 0 0 1.6rem;
+  padding-left: 0;
+}
+ol.pubs .title { font-weight: 600; }
+ol.pubs .venue { font-style: italic; }
+.pub-year {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-top: 1px solid var(--rule);
+  padding-top: 1.1rem;
+  margin: 1.8rem 0 0.9rem;
+  font-weight: 600;
+}
+.award {
+  display: inline-block;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 0.1rem 0.4rem;
+  margin-top: 0.25rem;
+}
+
+/* News / blog */
+ul.news { list-style: none; margin: 0; padding: 0; }
+ul.news li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  align-items: baseline;
+}
+ul.news .date {
+  flex: 0 0 4.8rem;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+article.post h1 { margin-bottom: 0.3rem; }
+article.post .post-date { margin-bottom: 1.6rem; }
+
+/* Contact list */
+ul.contact { list-style: none; margin: 0; padding: 0; }
+ul.contact li { margin-bottom: 1.2rem; }
+ul.contact .label {
+  display: inline-block;
+  width: 6.5rem;
+  color: var(--muted);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+/* Footer */
+footer.site {
+  border-top: 1px solid var(--rule);
+  padding: 1.2rem 0 2rem;
+}
+footer.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 540px) {
+  html { font-size: 16px; }
+  nav.main a { margin-left: 0.8rem; }
+  ul.news li { flex-direction: column; gap: 0.1rem; }
+}
+
+/* Header logo mark */
+.site-name { display: inline-flex; align-items: center; gap: 0.55rem; }
+.site-name img.mark { height: 34px; width: auto; display: block; }
+
+/* Quiet project introduction */
+.project-card { margin: 0.5rem 0 1.6rem; }
+.project-card img.logo { width: min(340px, 100%); height: auto; display: block; margin: 0 0 1.4rem; }
+.project-card p { margin-bottom: 0; }
+
+/* Headshot */
+.intro img.headshot {
+  width: 170px; height: 170px; border-radius: 50%;
+  flex: 0 0 auto; border: 0;
+}
+@media (max-width: 540px) { .intro img.headshot { margin: 0 auto; } }
+
+/* Profile contact icons */
+.profile { flex: 0 0 188px; width: 188px; text-align: center; }
+.profile .headshot { display: block; margin: 0 auto; }
+.profile-links { display: flex; justify-content: center; gap: 4px; margin-top: 0.7rem; }
+.profile-links a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: var(--accent); text-decoration: none; }
+.profile-links svg { width: 24px; height: 24px; }
+.profile-links a:hover { background: var(--accent-soft); }
+.profile-links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; background: var(--accent-soft); }
+@media (max-width: 540px) { .profile { margin: 0 auto; } }
+
+/* Compact academic background beneath the profile */
+.profile-education { margin-top: 1.6rem; text-align: left; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+.profile-education h2 { margin: 0 0 0.85rem; font-size: 0.8rem; font-weight: 600; color: var(--text); }
+.profile-education ul { list-style: none; margin: 0; padding: 0; }
+.profile-education li { margin: 0 0 1.1rem; font-size: 0.8125rem; line-height: 1.55; }
+.profile-education strong { display: block; font-weight: 500; }
+.profile-education span { display: block; margin-top: 0.2rem; color: var(--muted); }
+
+/* Keep the reading column comfortable on smaller screens. */
+@media (max-width: 760px) {
+  main { padding-top: 2.5rem; }
+  .intro { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+  .profile { width: 100%; max-width: 22rem; margin: 0 auto; }
+  .profile-education { margin-top: 1.5rem; }
+  .profile-education li { font-size: 0.875rem; }
+  .project-card img.logo { width: min(300px, 100%); }
+}
+@media (max-width: 540px) {
+  ul.news .date { flex-basis: auto; }
+}
