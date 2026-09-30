@@ -217,3 +217,13 @@ footer.site .wrap {
   flex: 0 0 auto; border: 3px solid var(--accent-soft);
 }
 @media (max-width: 540px) { .intro img.headshot { margin: 0 auto; } }
+
+/* Profile contact icons */
+.profile { flex: 0 0 188px; width: 188px; text-align: center; }
+.profile .headshot { display: block; margin: 0 auto; }
+.profile-links { display: flex; justify-content: center; gap: 4px; margin-top: 0.7rem; }
+.profile-links a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; color: var(--accent); text-decoration: none; }
+.profile-links svg { width: 24px; height: 24px; }
+.profile-links a:hover { background: var(--accent-soft); }
+.profile-links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; background: var(--accent-soft); }
+@media (max-width: 540px) { .profile { margin: 0 auto; } }
